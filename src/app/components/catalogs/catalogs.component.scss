@@ -1,0 +1,66 @@
+.full-width-table {
+  width: 80%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: #2a4b7c;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.add-button:hover {
+  background-color: #303f9f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.add-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.3);
+}
+
+.toolbar {
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-header {
+  background-color: #2a4b7c !important;
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold !important;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mat-spinner {
+  color: #ffe81f !important;
+}
