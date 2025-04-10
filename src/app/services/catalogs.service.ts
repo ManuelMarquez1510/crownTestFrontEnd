@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../environments/enviroment';
 import { CatalogsResponseInterface } from '../interfaces/catalogs-response.interface';
+import { CatalogsPostInterface } from '../interfaces/catalogs.interface';
 @Injectable({
   providedIn: 'root',
 })
@@ -12,14 +13,14 @@ export class CatalogsService {
   constructor(private httpClient: HttpClient) {}
 
   getCatalog(): Observable<CatalogsResponseInterface[]> {
-    const url = `${this.apiUrl}people`;
+    const url = `${this.apiUrl}getPeople`;
     return this.httpClient
       .get<CatalogsResponseInterface[]>(url)
       .pipe((res) => res);
   }
 
-  addCatalog(item: any): Observable<any> {
-    const url = `${this.apiUrl}people`;
-    return this.httpClient.post(url, item);
+  addCatalog(item: CatalogsPostInterface): Observable<CatalogsPostInterface> {
+    const url = `${this.apiUrl}createPeople`;
+    return this.httpClient.post<CatalogsPostInterface>(url, item);
   }
 }
