@@ -13,14 +13,14 @@ export class CatalogsService {
   constructor(private httpClient: HttpClient) {}
 
   getCatalog(): Observable<CatalogsResponseInterface[]> {
-    const url = `${this.apiUrl}getPeople`;
+    const url = this.apiUrl;
     return this.httpClient
       .get<CatalogsResponseInterface[]>(url)
       .pipe((res) => res);
   }
 
   addCatalog(item: CatalogsPostInterface): Observable<CatalogsPostInterface> {
-    const url = `${this.apiUrl}createPeople`;
+    const url = this.apiUrl;
     return this.httpClient.post<CatalogsPostInterface>(url, item);
   }
 }
